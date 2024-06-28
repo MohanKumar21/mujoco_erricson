@@ -1,0 +1,90 @@
+{
+    "os": "Linux-5.15.153.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2024-06-28T14:04:46.048345",
+    "startedAt": "2024-06-28T14:04:44.660607",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--track"
+    ],
+    "state": "running",
+    "program": "/mnt/e/erricson/ppo_code_continuous.py",
+    "codePathLocal": "ppo_code_continuous.py",
+    "codePath": "ppo_code_continuous.py",
+    "git": {
+        "remote": "git@github.com:MohanKumar21/mujoco_erricson.git",
+        "commit": "553af4213a6c2742fc4d010fa34d9f162eaef5ac"
+    },
+    "email": "mohanmrm20@gmail.com",
+    "root": "/mnt/e/erricson",
+    "host": "DESKTOP-TFLBP7O",
+    "username": "rostoki",
+    "executable": "/home/rostoki/.cache/pypoetry/virtualenvs/mujoco-Wukag0HS-py3.10/bin/python3",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 2400.001,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2400.001,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2400.001,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2400.001,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2400.001,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2400.001,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2400.001,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2400.001,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2400.001,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 1006.853931427002,
+            "used": 35.37063217163086
+        }
+    },
+    "gpu": "NVIDIA GeForce GTX 1650",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1650",
+            "memory_total": 4294967296
+        }
+    ],
+    "memory": {
+        "total": 7.681671142578125
+    }
+}

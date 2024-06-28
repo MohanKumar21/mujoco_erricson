@@ -1,0 +1,29 @@
+2024-06-28 19:39:40,857 INFO    MainThread:31531 [wandb_setup.py:_flush():76] Current SDK version is 0.17.3
+2024-06-28 19:39:40,857 INFO    MainThread:31531 [wandb_setup.py:_flush():76] Configure stats pid to 31531
+2024-06-28 19:39:40,857 INFO    MainThread:31531 [wandb_setup.py:_flush():76] Loading settings from /home/rostoki/.config/wandb/settings
+2024-06-28 19:39:40,857 INFO    MainThread:31531 [wandb_setup.py:_flush():76] Loading settings from /mnt/e/erricson/wandb/settings
+2024-06-28 19:39:40,858 INFO    MainThread:31531 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-06-28 19:39:40,858 INFO    MainThread:31531 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-06-28 19:39:40,859 INFO    MainThread:31531 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'ppo_code_continuous.py', 'program_abspath': '/mnt/e/erricson/ppo_code_continuous.py', 'program': '/mnt/e/erricson/ppo_code_continuous.py'}
+2024-06-28 19:39:40,859 INFO    MainThread:31531 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-06-28 19:39:40,859 INFO    MainThread:31531 [wandb_init.py:_log_setup():520] Logging user logs to /mnt/e/erricson/wandb/run-20240628_193940-neb9vh8l/logs/debug.log
+2024-06-28 19:39:40,860 INFO    MainThread:31531 [wandb_init.py:_log_setup():521] Logging internal logs to /mnt/e/erricson/wandb/run-20240628_193940-neb9vh8l/logs/debug-internal.log
+2024-06-28 19:39:40,860 INFO    MainThread:31531 [wandb_init.py:init():560] calling init triggers
+2024-06-28 19:39:40,860 INFO    MainThread:31531 [wandb_init.py:init():567] wandb.init called with sweep_config: {}
+config: {'exp_name': 'ppo_code_continuous', 'gym_id': 'Ant-v4', 'learning_rate': 0.0003, 'seed': 1, 'total_timesteps': 20000, 'torch_deterministic': True, 'cuda': True, 'track': True, 'wandb_project_name': 'ppo-implementation-details', 'wandb_entity': None, 'capture_video': True, 'num_envs': 1, 'num_steps': 2048, 'anneal_lr': True, 'gae': True, 'gamma': 0.99, 'gae_lambda': 0.95, 'num_minibatches': 32, 'update_epochs': 10, 'norm_adv': True, 'clip_coef': 0.2, 'clip_vloss': True, 'ent_coef': 0.0, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'target_kl': None, 'batch_size': 2048, 'minibatch_size': 64}
+2024-06-28 19:39:40,861 INFO    MainThread:31531 [wandb_init.py:init():610] starting backend
+2024-06-28 19:39:40,861 INFO    MainThread:31531 [wandb_init.py:init():614] setting up manager
+2024-06-28 19:39:40,865 INFO    MainThread:31531 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-06-28 19:39:40,867 INFO    MainThread:31531 [wandb_init.py:init():622] backend started and connected
+2024-06-28 19:39:40,876 INFO    MainThread:31531 [wandb_init.py:init():711] updated telemetry
+2024-06-28 19:39:40,960 INFO    MainThread:31531 [wandb_init.py:init():744] communicating run to backend with 90.0 second timeout
+2024-06-28 19:39:41,634 INFO    MainThread:31531 [wandb_run.py:_on_init():2402] communicating current version
+2024-06-28 19:39:41,756 INFO    MainThread:31531 [wandb_run.py:_on_init():2411] got version response 
+2024-06-28 19:39:41,757 INFO    MainThread:31531 [wandb_init.py:init():795] starting run threads in backend
+2024-06-28 19:39:42,908 INFO    MainThread:31531 [wandb_run.py:_console_start():2380] atexit reg
+2024-06-28 19:39:42,908 INFO    MainThread:31531 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2024-06-28 19:39:42,909 INFO    MainThread:31531 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2024-06-28 19:39:42,909 INFO    MainThread:31531 [wandb_run.py:_redirect():2325] Redirects installed.
+2024-06-28 19:39:42,913 INFO    MainThread:31531 [wandb_init.py:init():838] run started, returning control to user process
+2024-06-28 19:39:42,914 INFO    MainThread:31531 [wandb_run.py:_tensorboard_callback():1544] tensorboard callback: runs/Ant-v4__ppo_code_continuous__1__1719583778, True
+2024-06-28 19:42:42,189 WARNING MsgRouterThr:31531 [router.py:message_loop():77] message_loop has been closed

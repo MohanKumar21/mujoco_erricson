@@ -1,0 +1,113 @@
+wandb_version: 1
+
+exp_name:
+  desc: null
+  value: ppo_code_continuous
+gym_id:
+  desc: null
+  value: Ant-v4
+learning_rate:
+  desc: null
+  value: 0.0003
+seed:
+  desc: null
+  value: 1
+total_timesteps:
+  desc: null
+  value: 2000000
+torch_deterministic:
+  desc: null
+  value: true
+cuda:
+  desc: null
+  value: true
+track:
+  desc: null
+  value: true
+wandb_project_name:
+  desc: null
+  value: ppo-implementation-details
+wandb_entity:
+  desc: null
+  value: null
+capture_video:
+  desc: null
+  value: false
+num_envs:
+  desc: null
+  value: 1
+num_steps:
+  desc: null
+  value: 2048
+anneal_lr:
+  desc: null
+  value: true
+gae:
+  desc: null
+  value: true
+gamma:
+  desc: null
+  value: 0.99
+gae_lambda:
+  desc: null
+  value: 0.95
+num_minibatches:
+  desc: null
+  value: 32
+update_epochs:
+  desc: null
+  value: 10
+norm_adv:
+  desc: null
+  value: true
+clip_coef:
+  desc: null
+  value: 0.2
+clip_vloss:
+  desc: null
+  value: true
+ent_coef:
+  desc: null
+  value: 0.0
+vf_coef:
+  desc: null
+  value: 0.5
+max_grad_norm:
+  desc: null
+  value: 0.5
+target_kl:
+  desc: null
+  value: null
+batch_size:
+  desc: null
+  value: 2048
+minibatch_size:
+  desc: null
+  value: 64
+_wandb:
+  desc: null
+  value:
+    code_path: code/ppo_code_continuous.py
+    python_version: 3.10.12
+    cli_version: 0.17.3
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1719580033
+    t:
+      1:
+      - 1
+      - 55
+      2:
+      - 1
+      - 55
+      3:
+      - 13
+      - 16
+      - 23
+      - 35
+      4: 3.10.12
+      5: 0.17.3
+      8:
+      - 5
+      13: linux-x86_64

@@ -1,0 +1,65 @@
+cuda
+(2048, 1) (27,)
+torch.Size([2048, 1, 27])
+/home/rostoki/.cache/pypoetry/virtualenvs/mujoco-Wukag0HS-py3.10/lib/python3.10/site-packages/gym/utils/passive_env_checker.py:233: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  if not isinstance(terminated, (bool, np.bool8)):
+Moviepy - Building video /mnt/e/erricson/videos/Ant-v4__ppo_code_continuous__1__1719583778/rl-video-episode-0.mp4.
+Moviepy - Writing video /mnt/e/erricson/videos/Ant-v4__ppo_code_continuous__1__1719583778/rl-video-episode-0.mp4
+Moviepy - Done !
+Moviepy - video ready /mnt/e/erricson/videos/Ant-v4__ppo_code_continuous__1__1719583778/rl-video-episode-0.mp4
+Moviepy - Building video /mnt/e/erricson/videos/Ant-v4__ppo_code_continuous__1__1719583778/rl-video-episode-1.mp4.
+Moviepy - Writing video /mnt/e/erricson/videos/Ant-v4__ppo_code_continuous__1__1719583778/rl-video-episode-1.mp4
+Moviepy - Done !
+Moviepy - video ready /mnt/e/erricson/videos/Ant-v4__ppo_code_continuous__1__1719583778/rl-video-episode-1.mp4
+Moviepy - Building video /mnt/e/erricson/videos/Ant-v4__ppo_code_continuous__1__1719583778/rl-video-episode-8.mp4.
+Moviepy - Writing video /mnt/e/erricson/videos/Ant-v4__ppo_code_continuous__1__1719583778/rl-video-episode-8.mp4
+Moviepy - Done !
+Moviepy - video ready /mnt/e/erricson/videos/Ant-v4__ppo_code_continuous__1__1719583778/rl-video-episode-8.mp4
+t:   0%|                                                               | 0/31 [00:00<?, ?it/s, now=None]
+Moviepy - Building video /mnt/e/erricson/videos/Ant-v4__ppo_code_continuous__1__1719583778/rl-video-episode-27.mp4.
+Moviepy - Writing video /mnt/e/erricson/videos/Ant-v4__ppo_code_continuous__1__1719583778/rl-video-episode-27.mp4
+Moviepy - Done !
+
+Moviepy - video ready /mnt/e/erricson/videos/Ant-v4__ppo_code_continuous__1__1719583778/rl-video-episode-27.mp4
+SPS: 51
+SPS: 81
+Moviepy - Building video /mnt/e/erricson/videos/Ant-v4__ppo_code_continuous__1__1719583778/rl-video-episode-64.mp4.
+Moviepy - Writing video /mnt/e/erricson/videos/Ant-v4__ppo_code_continuous__1__1719583778/rl-video-episode-64.mp4
+Moviepy - Done !
+Moviepy - video ready /mnt/e/erricson/videos/Ant-v4__ppo_code_continuous__1__1719583778/rl-video-episode-64.mp4
+SPS: 87
+SPS: 103
+Traceback (most recent call last):
+  File "/mnt/e/erricson/ppo_code_continuous.py", line 220, in <module>
+    next_obs, reward, done,terminated, info = envs.step(action.cpu().numpy())
+  File "/home/rostoki/.cache/pypoetry/virtualenvs/mujoco-Wukag0HS-py3.10/lib/python3.10/site-packages/gym/vector/vector_env.py", line 137, in step
+    return self.step_wait()
+  File "/home/rostoki/.cache/pypoetry/virtualenvs/mujoco-Wukag0HS-py3.10/lib/python3.10/site-packages/gym/vector/sync_vector_env.py", line 150, in step_wait
+    ) = env.step(action)
+  File "/home/rostoki/.cache/pypoetry/virtualenvs/mujoco-Wukag0HS-py3.10/lib/python3.10/site-packages/gym/core.py", line 418, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+  File "/home/rostoki/.cache/pypoetry/virtualenvs/mujoco-Wukag0HS-py3.10/lib/python3.10/site-packages/gym/wrappers/normalize.py", line 130, in step
+    obs, rews, terminateds, truncateds, infos = self.env.step(action)
+  File "/home/rostoki/.cache/pypoetry/virtualenvs/mujoco-Wukag0HS-py3.10/lib/python3.10/site-packages/gym/core.py", line 384, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+  File "/home/rostoki/.cache/pypoetry/virtualenvs/mujoco-Wukag0HS-py3.10/lib/python3.10/site-packages/gym/wrappers/normalize.py", line 75, in step
+    obs, rews, terminateds, truncateds, infos = self.env.step(action)
+  File "/home/rostoki/.cache/pypoetry/virtualenvs/mujoco-Wukag0HS-py3.10/lib/python3.10/site-packages/gym/core.py", line 460, in step
+    return self.env.step(self.action(action))
+  File "/home/rostoki/.cache/pypoetry/virtualenvs/mujoco-Wukag0HS-py3.10/lib/python3.10/site-packages/gym/wrappers/record_video.py", line 159, in step
+    self.video_recorder.capture_frame()
+  File "/home/rostoki/.cache/pypoetry/virtualenvs/mujoco-Wukag0HS-py3.10/lib/python3.10/site-packages/gym/wrappers/monitoring/video_recorder.py", line 111, in capture_frame
+    frame = self.env.render()
+  File "/home/rostoki/.cache/pypoetry/virtualenvs/mujoco-Wukag0HS-py3.10/lib/python3.10/site-packages/gym/core.py", line 329, in render
+    return self.env.render(*args, **kwargs)
+  File "/home/rostoki/.cache/pypoetry/virtualenvs/mujoco-Wukag0HS-py3.10/lib/python3.10/site-packages/gym/core.py", line 329, in render
+    return self.env.render(*args, **kwargs)
+  File "/home/rostoki/.cache/pypoetry/virtualenvs/mujoco-Wukag0HS-py3.10/lib/python3.10/site-packages/gym/wrappers/order_enforcing.py", line 51, in render
+    return self.env.render(*args, **kwargs)
+  File "/home/rostoki/.cache/pypoetry/virtualenvs/mujoco-Wukag0HS-py3.10/lib/python3.10/site-packages/gym/wrappers/env_checker.py", line 55, in render
+    return self.env.render(*args, **kwargs)
+  File "/home/rostoki/.cache/pypoetry/virtualenvs/mujoco-Wukag0HS-py3.10/lib/python3.10/site-packages/gym/envs/mujoco/mujoco_env.py", line 394, in render
+    data = self._get_viewer(self.render_mode).read_pixels(depth=False)
+  File "/home/rostoki/.cache/pypoetry/virtualenvs/mujoco-Wukag0HS-py3.10/lib/python3.10/site-packages/gym/envs/mujoco/mujoco_rendering.py", line 126, in read_pixels
+    mujoco.mjr_readPixels(rgb_arr, depth_arr, rect, self.con)
+KeyboardInterrupt

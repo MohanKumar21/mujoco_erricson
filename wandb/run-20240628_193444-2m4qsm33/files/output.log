@@ -1,0 +1,7 @@
+cuda
+(2048, 1) (27,)
+torch.Size([2048, 1, 27])
+/home/rostoki/.cache/pypoetry/virtualenvs/mujoco-Wukag0HS-py3.10/lib/python3.10/site-packages/gym/wrappers/monitoring/video_recorder.py:59: UserWarning: [33mWARN: Disabling video recorder because environment <RecordEpisodeStatistics<TimeLimit<OrderEnforcing<PassiveEnvChecker<AntEnv<Ant-v4>>>>>> was not initialized with any compatible video mode between `rgb_array` and `rgb_array_list`
+  logger.warn(
+/home/rostoki/.cache/pypoetry/virtualenvs/mujoco-Wukag0HS-py3.10/lib/python3.10/site-packages/gym/envs/mujoco/mujoco_env.py:360: UserWarning: [33mWARN: You are calling render method without specifying any render mode. You can specify the render_mode at initialization, e.g. gym("Ant-v4", render_mode="rgb_array")
+  gym.logger.warn(
