@@ -104,7 +104,7 @@ if agent_args.on_policy == True:
             agent.put_data(transition) 
             score += r
             discriminator_score += reward
-            if done:
+            if done or terminated:
                 state_,_ = (env.reset())
                 state = np.clip((state_ - state_rms.mean) / (state_rms.var ** 0.5 + 1e-8), -5, 5)
                 score_lst.append(score)
@@ -119,11 +119,20 @@ if agent_args.on_policy == True:
         agent.train(discriminator, discriminator_args.batch_size, state_rms, n_epi)
         state_rms.update(np.vstack(state_lst))
         state_lst = []
+        
         if n_epi%args.print_interval==0 and n_epi!=0:
-            print("# of episode :{}, avg score : {:.1f}".format(n_epi, sum(score_lst)/len(score_lst)))
+            if len(score_lst)==0:
+                avg_score=0
+            else:
+                avg_score=sum(score_lst)/len(score_lst)
+            print("# of episode :{}, avg score : {:.1f}".format(n_epi, avg_score))
             score_lst = []
+       
         if (n_epi % args.save_interval == 0 )& (n_epi != 0):
-            torch.save(agent.state_dict(), './model_weights/model_'+str(n_epi))
+                torch.save(agent.state_dict(), './model_weights/model_'+str(n_epi))
+        if (n_epi % args.save_interval == 0 )& (n_epi != 0):
+                torch.save(discriminator.state_dict(), './model_weights/discriminator_'+str(n_epi))
+
 else : #off-policy
     for n_epi in range(args.epochs):
         score = 0.0
