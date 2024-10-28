@@ -22,15 +22,26 @@ class PPO(nn.Module):
         self.critic_optimizer = optim.Adam(self.critic.parameters(), lr=args.critic_lr)
         self.device = device
         
-    def get_dist(self,x):
-        return self.actor(x)
-    
-    def get_action(self,x):
-        mu,std = self.get_dist(x)
-        dist = torch.distributions.Normal(mu,std)
+    # def get_dist(self,x):
+    #     return self.actor(x)
+
+    def get_dist(self, x):
+        # Assuming the actor network outputs logits for each action in the discrete action space
+        logits = self.actor(x)
+        return torch.distributions.Categorical(logits=logits)
+
+    def get_action(self, x):
+        dist = self.get_dist(x)
         action = dist.sample()
-        log_prob = dist.log_prob(action).sum(-1,keepdim = True)
-        return action, log_prob
+        log_prob = dist.log_prob(action).unsqueeze(-1)
+        return action.item(), log_prob
+    
+    # def get_action(self,x):
+    #     mu,std = self.get_dist(x)
+    #     dist = torch.distributions.Normal(mu,std)
+    #     action = dist.sample()
+    #     log_prob = dist.log_prob(action).sum(-1,keepdim = True)
+    #     return action, log_prob
     
     def v(self,x):
         return self.critic(x)

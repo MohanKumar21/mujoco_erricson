@@ -116,7 +116,7 @@ def deep_Q_learning(env, architecture, optimizer_spec,
         transition = Transition(state=state, action=action, reward=reward,
                                 next_state=next_state, done=int(done))
         replay_buffer.insert(transition)
-
+        
         if done:
             # Resets the environment when finishing an episode
             next_state,_ = env.reset()

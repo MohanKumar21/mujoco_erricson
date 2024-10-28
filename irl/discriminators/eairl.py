@@ -32,7 +32,7 @@ class EAIRL(Discriminator):
         # print(self.reward(state,action),done_mask,self.empowerment(state),self.empowerment_t(next_state),self.args.gamma)
         val= self.reward(state,action) +\
     done_mask.to(self.device) * (self.args.gamma * self.empowerment_t(next_state) - self.empowerment(state))
-        return val
+        return val 
 
     def get_reward(self,log_prob,state,action,next_state,done):
         done_mask = 1 - done.float()

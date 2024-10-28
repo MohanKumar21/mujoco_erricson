@@ -17,7 +17,7 @@ class Agent(nn.Module):
             self.data = ReplayBuffer(action_prob_exist = True, max_size = self.args.traj_length, state_dim = state_dim, num_action = action_dim)
         else :
             self.data = ReplayBuffer(action_prob_exist = False, max_size = int(self.args.memory_size), state_dim = state_dim, num_action = action_dim)
-        file_size = 120
+        file_size = 1
         
         f = open(demonstrations_location_args.expert_state_location,'rb')
         self.expert_states = torch.tensor(np.concatenate([np.load(f) for _ in range(file_size)])).float()
