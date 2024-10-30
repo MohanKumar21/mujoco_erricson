@@ -15,6 +15,7 @@ class Network(NetworkBase):
         super(Network, self).__init__()
         self.activation = activation_function
         self.last_activation = last_activation
+        self.input_dim=input_dim
         layers_unit = [input_dim]+ [hidden_dim]*(layer_num-1)
         layers = ([nn.Linear(layers_unit[idx],layers_unit[idx+1]) for idx in range(len(layers_unit)-1)])
         self.layers = nn.ModuleList(layers)

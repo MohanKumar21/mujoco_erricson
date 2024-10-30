@@ -27,10 +27,13 @@ class PPO(nn.Module):
     def get_dist(self, x):
         # Actor network outputs logits for each action in discrete space
         logits = self.actor(x)
-        return torch.distributions.Categorical(logits=logits)
+        
+        # return torch.distributions.Categorical(logits=logits)
+        return torch.distributions.Categorical((torch.tensor([ 0.25, 0.25, 0.25, 0.25, 0.25, 0.25])))
 
     def get_action(self, x):
         dist = self.get_dist(x)
+        dist = torch.distributions.Categorical(torch.tensor([ 0.25, 0.25, 0.25, 0.25, 0.25, 0.25]))
         action = dist.sample()
         log_prob = dist.log_prob(action).unsqueeze(-1)
         return action.item(), log_prob
